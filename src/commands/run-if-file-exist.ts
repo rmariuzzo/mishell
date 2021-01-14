@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { promisify } from 'util'
 
-import { Command } from './command'
+import { Command } from '.'
 
 const access = promisify(fs.access)
 
@@ -16,7 +16,15 @@ export const runIfFileExist: Command<RunIfFileExistOptions> = async (
   opts
 ) => {
   const files = typeof opts.file === 'string' ? [opts.file] : opts.file
-  await Promise.all(files.map((file) => access(path.join(opts.cwd, file))))
+
+  try {
+    await Promise.all(files.map((file) => access(path.join(opts.cwd, file))))
+  } catch (error) {
+    if (opts.debug) {
+      console.debug(error.message)
+    }
+    return
+  }
 
   const [file, ...more] = args
 

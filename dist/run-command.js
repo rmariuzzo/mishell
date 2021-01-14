@@ -134,14 +134,14 @@ var __generator =
   }
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.runCommand = void 0
-var all_commands_1 = require('./commands/all-commands')
+var commands_1 = require('./commands')
 var runCommand = function (name, args, opts) {
   return __awaiter(void 0, void 0, void 0, function () {
     var command
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
-          command = all_commands_1.allCommands.find(function (_a) {
+          command = commands_1.commands.find(function (_a) {
             var name = _a.name,
               alias = _a.alias
             return [name, alias].includes(name)

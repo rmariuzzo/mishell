@@ -146,12 +146,15 @@ var util_1 = require('util')
 var access = util_1.promisify(fs_1.default.access)
 var runIfFileExist = function (args, opts) {
   return __awaiter(void 0, void 0, void 0, function () {
-    var files, file, more, result
+    var files, error_1, file, more, result
     var _a, _b
     return __generator(this, function (_c) {
       switch (_c.label) {
         case 0:
           files = typeof opts.file === 'string' ? [opts.file] : opts.file
+          _c.label = 1
+        case 1:
+          _c.trys.push([1, 3, , 4])
           return [
             4 /*yield*/,
             Promise.all(
@@ -160,8 +163,16 @@ var runIfFileExist = function (args, opts) {
               })
             )
           ]
-        case 1:
+        case 2:
           _c.sent()
+          return [3 /*break*/, 4]
+        case 3:
+          error_1 = _c.sent()
+          if (opts.debug) {
+            console.debug(error_1.message)
+          }
+          return [2 /*return*/]
+        case 4:
           ;(file = args[0]), (more = args.slice(1))
           result = execa_1.default(file, more, {
             cwd: opts.cwd
@@ -173,7 +184,7 @@ var runIfFileExist = function (args, opts) {
             ? void 0
             : _b.pipe(process.stderr)
           return [4 /*yield*/, result]
-        case 2:
+        case 5:
           _c.sent()
           return [2 /*return*/]
       }

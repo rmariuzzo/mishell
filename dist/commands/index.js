@@ -1,8 +1,8 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-exports.allCommands = void 0
+exports.commands = void 0
 var run_if_file_exist_1 = require('./run-if-file-exist')
-exports.allCommands = [
+exports.commands = [
   {
     name: 'run-if-file-exists',
     alias: 'rife',
