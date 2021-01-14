@@ -7,6 +7,7 @@ on:
 
 jobs:
   publish:
+    name: Publish ${GITHUB_REF/refs\/tags\//}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
