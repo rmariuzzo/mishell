@@ -24,5 +24,5 @@ export const commands: ReadonlyArray<{
   run: Command
 }> = [
   { name: 'run-if-file-exists', alias: 'rife', run: runIfFileExist },
-  { name: 'git-default-remote-branch', alias: 'rife', run: gitDefaultRemoteBranch }
+  { name: 'git-default-remote-branch', alias: 'gdrb', run: gitDefaultRemoteBranch }
 ]

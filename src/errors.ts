@@ -1,6 +1,7 @@
 export enum ErrorCode {
   unhandled = 99,
-  commandNotFound = 4
+  commandNotFound = 94,
+  notFound = 4,
 }
 
 export class AppError extends Error {
