@@ -12,6 +12,7 @@
     "prebuild": "npm run clean",
     "postversion": "git push origin && git push origin --tags"
   },
+  "bin": "bin.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rmariuzzo/mishell.git"
