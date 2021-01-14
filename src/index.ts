@@ -1,6 +1,6 @@
 import parseArgv from 'yargs-parser'
 
-import { errors } from './errors'
+import { AppError, ErrorCode } from './errors'
 import { runCommand } from './run-command'
 
 const {
@@ -35,7 +35,12 @@ runCommand(
     process.exit(0)
   })
   .catch((error) => {
-    console.error('mishell:', errors.unhandled.description)
-    console.error(error)
-    process.exit(errors.unhandled.code)
+    if (error instanceof AppError) {
+      console.error(`mishell: ${error.message}`)
+      process.exitCode = error.code
+    } else {
+      console.error('mishell: unhandled error')
+      console.error(debug ? error : error.message)
+      process.exitCode = ErrorCode.unhandled
+    }
   })

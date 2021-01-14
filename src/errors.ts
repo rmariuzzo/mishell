@@ -1,6 +1,13 @@
-export const errors: Record<string, { code: number; description: string }> = {
-  unhandled: {
-    code: 99,
-    description: 'Unhandled error'
+export enum ErrorCode {
+  unhandled = 99,
+  commandNotFound = 4
+}
+
+export class AppError extends Error {
+  code
+  constructor(code: ErrorCode, message: string) {
+    super(message)
+    Object.setPrototypeOf(this, AppError.prototype)
+    this.code = code
   }
 }
