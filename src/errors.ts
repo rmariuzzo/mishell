@@ -1,6 +1,7 @@
 export enum ErrorCode {
   unhandled = 99,
   commandNotFound = 94,
+  invalidInput = 3,
   notFound = 4,
 }
 
