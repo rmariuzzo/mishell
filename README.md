@@ -44,6 +44,12 @@ npx mishell [command]
 - **Usage:** `gdrb [remote=origin]`
 - **Description:** Return the default remote branch for a git repo.
 
+### `npm-pre-version`
+
+- **Alias:** `npv`
+- **Usage:** `npv [newversion] [releaseid]`
+- **Description:** Return the default remote branch for a git repo.
+
 ### `git-clean-branches`
 
 - **Alias:** `gcb`
