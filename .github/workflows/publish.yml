@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish:
-    name: Publish ${ GITHUB_REF/refs\/tags\// }
+    name: Publish ${{github.ref}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -43,10 +43,10 @@ jobs:
       - name: Status
         run: git status
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Build assets.
-          branch: main
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: Build assets.
+      #     branch: main
 
       - name: Publish to registry
         env:

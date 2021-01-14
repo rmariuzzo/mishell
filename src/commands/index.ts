@@ -1,4 +1,5 @@
 import { runIfFileExist } from './run-if-file-exist'
+import {gitDefaultRemoteBranch} from './git-default-remote-branch'
 
 export type GlobalOpts = {
   debug: boolean
@@ -21,4 +22,7 @@ export const commands: ReadonlyArray<{
   name: string
   alias: string
   run: Command
-}> = [{ name: 'run-if-file-exists', alias: 'rife', run: runIfFileExist }]
+}> = [
+  { name: 'run-if-file-exists', alias: 'rife', run: runIfFileExist },
+  { name: 'git-default-remote-branch', alias: 'rife', run: gitDefaultRemoteBranch }
+]
