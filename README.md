@@ -38,12 +38,6 @@ npx mishell [command]
 - **Usage:** `rife [command] [--file=file1] [--file=file2] ... [--file=file3]`
 - **Description:** Pull docker images if a `docker-compose.yml` exists.
 
-### `docker-compose-pull`
-
-- **Alias:** `dcp`
-- **Usage:** `dcp`
-- **Description:** Pull docker images if a `docker-compose.yml` exists.
-
 ### `git-default-remote-branch`
 
 - **Alias:** `gdrb`

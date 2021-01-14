@@ -7,12 +7,12 @@ on:
 
 jobs:
   publish:
-    name: Publish ${GITHUB_REF/refs\/tags\//}
+    name: Publish ${ GITHUB_REF/refs\/tags\// }
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref }}
 
       - name: Read .nvmrc
         run: echo ::set-output name=NVMRC::$(cat .nvmrc)
