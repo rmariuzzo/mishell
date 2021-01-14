@@ -1,6 +1,6 @@
 {
   "name": "mishell",
-  "version": "0.0.7",
+  "version": "1.0.0-alpha.0",
   "description": "Collection of shell utilities.",
   "main": "bin.js",
   "scripts": {
