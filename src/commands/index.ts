@@ -1,4 +1,5 @@
 import { runIfFileExist } from './run-if-file-exist'
+import { gitCleanBranches } from './git-clean-branches'
 import { gitDefaultRemoteBranch } from './git-default-remote-branch'
 import { npmPreVersion } from './npm-pre-version'
 
@@ -24,4 +25,5 @@ export const commands: ReadonlyArray<{
   { name: 'run-if-file-exists', alias: 'rife', run: runIfFileExist },
   { name: 'git-default-remote-branch', alias: 'gdrb', run: gitDefaultRemoteBranch },
   { name: 'npm-pre-version', alias: 'npv', run: npmPreVersion },
+  { name: 'git-clean-branches', alias: 'gcb', run: gitCleanBranches },
 ]

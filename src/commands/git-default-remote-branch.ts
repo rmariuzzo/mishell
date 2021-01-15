@@ -7,9 +7,10 @@ const headBranchMatcher = /HEAD branch: (?<branch>.+)/
 
 type GitDefaultRemoteBranchOptions = {
   remote: string
+  silent: boolean
 }
 
-export const gitDefaultRemoteBranch: Command<GitDefaultRemoteBranchOptions> = async (
+export const gitDefaultRemoteBranch: Command<GitDefaultRemoteBranchOptions, string> = async (
   args,
   opts
 ) => {
@@ -25,7 +26,9 @@ export const gitDefaultRemoteBranch: Command<GitDefaultRemoteBranchOptions> = as
     )
   }
 
-  console.log(branch)
+  if (!opts.silent) {
+    console.log(branch)
+  }
 
   return branch
 }
