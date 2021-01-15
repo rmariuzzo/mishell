@@ -18,7 +18,8 @@ export const gitCleanBranches: Command<GitCleanBranchesOptions> = async (
     silent: true
   })
 
-  const gitBranchResult = await execa('git', ['branch'], { cwd: opts.cwd })
+  await execa('git', ['checkout', defaultBranch])
+  const gitBranchResult = await execa('git', ['branch'])
   const branches = gitBranchResult.stdout
     .split('\n')
     .map(cleanBranch)
