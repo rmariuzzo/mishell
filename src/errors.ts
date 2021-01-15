@@ -3,6 +3,7 @@ export enum ErrorCode {
   commandNotFound = 94,
   invalidInput = 3,
   notFound = 4,
+  unexpected = 5,
 }
 
 export class AppError extends Error {

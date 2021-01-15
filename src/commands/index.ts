@@ -1,6 +1,7 @@
 import { runIfFileExist } from './run-if-file-exist'
 import { gitCleanBranches } from './git-clean-branches'
 import { gitDefaultRemoteBranch } from './git-default-remote-branch'
+import { gitFetchPull } from './git-fetch-pull'
 import { npmPreVersion } from './npm-pre-version'
 
 export type GlobalOpts = {
@@ -26,4 +27,5 @@ export const commands: ReadonlyArray<{
   { name: 'git-default-remote-branch', alias: 'gdrb', run: gitDefaultRemoteBranch },
   { name: 'npm-pre-version', alias: 'npv', run: npmPreVersion },
   { name: 'git-clean-branches', alias: 'gcb', run: gitCleanBranches },
+  { name: 'git-fetch-pull', alias: 'gfp', run: gitFetchPull },
 ]
