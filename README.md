@@ -44,12 +44,6 @@ npx mishell [command]
 - **Usage:** `gdrb [remote=origin]`
 - **Description:** Return the default remote branch for a git repo.
 
-### `npm-pre-version`
-
-- **Alias:** `npv`
-- **Usage:** `npv [newversion] [releaseid]`
-- **Description:** Return the default remote branch for a git repo.
-
 ### `git-clean-branches`
 
 - **Alias:** `gcb`
@@ -67,6 +61,18 @@ npx mishell [command]
 - **Alias:** `gr`
 - **Usage:** `gr [remote=origin]`
 - **Description:** Remove all local branches preserving the default remote branch for a git repo. Also fetch and pull changes from the default remote branch.
+
+### `update-nvmrc`
+
+- **Alias:** `un`
+- **Usage:** `un [version=--lts]`
+- **Description:** Update the local `.nvmrc` file with the specified nvm version.
+
+### `npm-pre-version`
+
+- **Alias:** `npv`
+- **Usage:** `npv [newversion] [releaseid]`
+- **Description:** Return the default remote branch for a git repo.
 
 ---
 
