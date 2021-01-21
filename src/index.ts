@@ -1,7 +1,12 @@
 import parseArgv from 'yargs-parser'
+import updateNotifier from 'update-notifier'
 
 import { AppError, ErrorCode } from './errors'
 import { runCommand } from './run-command'
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const pkg = require('../package.json')
+updateNotifier({ pkg }).notify()
 
 const {
   _: [command, ...args],
@@ -22,15 +27,11 @@ if (help || nothingToDo) {
   process.exit(0)
 }
 
-runCommand(
-  command,
-  args,
-  {
-    debug: Boolean(debug),
-    cwd: process.cwd(),
-    ...options,
-  },
-)
+runCommand(command, args, {
+  debug: Boolean(debug),
+  cwd: process.cwd(),
+  ...options
+})
   .then(() => {
     process.exit(0)
   })

@@ -10,7 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "CommonJS",
     "moduleResolution": "node",
-    "resolveJsonModule": false,
+    "resolveJsonModule": true,
     "outDir": "./dist"
   },
   "include": ["src/index.ts"]
