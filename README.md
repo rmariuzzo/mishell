@@ -68,11 +68,11 @@ npx mishell [command]
 - **Usage:** `un [version=--lts]`
 - **Description:** Update the local `.nvmrc` file with the specified nvm version.
 
-### `npm-pre-version`
+### `npm-version`
 
-- **Alias:** `npv`
-- **Usage:** `npv [newversion] [releaseid]`
-- **Description:** Return the default remote branch for a git repo.
+- **Alias:** `nv`
+- **Usage:** `nv [newversion] [releaseid]`
+- **Description:** Create an NPM new tag version.
 
 ---
 

@@ -5,9 +5,9 @@ import { AppError, ErrorCode } from '../errors'
 const validNewVersions = ['major', 'minor', 'patch', 'release']
 const validReleaseIds = ['alpha', 'beta', 'next']
 
-type NpmPreVersionOptions = {}
+type NpmVersionOptions = {}
 
-export const npmPreVersion: Command<NpmPreVersionOptions> = async (
+export const npmVersion: Command<NpmVersionOptions> = async (
   args,
   opts
 ) => {

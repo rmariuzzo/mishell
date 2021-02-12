@@ -2,7 +2,7 @@ import { gitCleanBranches } from './git-clean-branches'
 import { gitDefaultRemoteBranch } from './git-default-remote-branch'
 import { gitFetchPull } from './git-fetch-pull'
 import { gitRefresh } from './git-refresh'
-import { npmPreVersion } from './npm-pre-version'
+import { npmVersion } from './npm-version'
 import { runIfFileExist } from './run-if-file-exist'
 import { updateNvmrc } from './update-nvmrc'
 
@@ -29,7 +29,7 @@ export const commands: ReadonlyArray<{
   { name: 'git-default-remote-branch', alias: 'gdrb', run: gitDefaultRemoteBranch },
   { name: 'git-fetch-pull', alias: 'gfp', run: gitFetchPull },
   { name: 'git-refresh', alias: 'gr', run: gitRefresh },
-  { name: 'npm-pre-version', alias: 'npv', run: npmPreVersion },
+  { name: 'npm-version', alias: 'nv', run: npmVersion },
   { name: 'run-if-file-exists', alias: 'rife', run: runIfFileExist },
   { name: 'update-nvmrc', alias: 'un', run: updateNvmrc },
 ]
